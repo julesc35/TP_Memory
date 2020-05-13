@@ -61,7 +61,7 @@ class Carte extends Phaser.GameObjects.Sprite {
 
     create(){
 
-        var carte1 = new Carte({Scene: this, x:100, y:100, texture: "carte"});
+        this.add.existing(this,100, 100, 'carte');
 
  //       var carte2 = new Carte(1, '2');
 
