@@ -3,43 +3,48 @@
 constructor(){
     super("jeu")
 
-class Carte extends Phaser.GameObjects.Image {
+class Carte extends Phaser.GameObjects.Sprite {
   constructor(config) {
     super(config.scene, config.x, config.y, config.texture);
     config.scene.add.existing(this);
   }
 }
-
-        function CarteImp1(id, image){
-        this. id = 1;
-        this. image = this.load.image('1', 'assets/1.png');
-    }
-
-        function CarteImp2(id, image){
-        this. id = 2;
-        this. image = this.load.image('2', 'assets/2.png');
-    }
-
-        function CarteImp3(id, image){
-        this. id = 3;
-        this. image = this.load.image('3', 'assets/3.png');
-    }
-
-        function CarteImp4(id, image){
-        this. id = 4;
-        this. image = this.load.image('4', 'assets/4.png');
-    }
-
-        function CarteImp5(id, image){
-        this. id = 5;
-        this. image = this.load.image('5', 'assets/5.png');
-    }
-
-        function CarteImp6(id, image){
-        this. id = 6;
-        this. image = this.load.image('6', 'assets/6.png');
-    }
-
+class Carteimp1 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
+class Carteimp2 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
+class Carteimp3 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
+class Carteimp4 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
+class Carteimp5 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
+class Carteimp6 extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
 }
 
     preload(){
