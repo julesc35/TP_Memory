@@ -3,7 +3,7 @@
 constructor(){
     super("jeu")
 
-class Carte extends Phaser.GameObjects.Sprite {
+class Carte extends Phaser.GameObjects.Image {
   constructor(config) {
     super(config.scene, config.x, config.y, config.texture);
     config.scene.add.existing(this);
@@ -61,11 +61,15 @@ class Carte extends Phaser.GameObjects.Sprite {
 
     create(){
 
-        Carte.prototype =
-        Object.create(phaser.GameObjects.Carte.prototype);
-        Carte.prototype.constructor = Carte;
-        this.carte1 = new Carte({Scene: this, x:100, y:100,texture: "carte"});
-        this.add.existing(this.carte1);
+        function Carte (scene, x, y, texture){
+            Phaser.Physics.Arcade.Sprite.call(scene, x, y, texture);
+            scene.add.existing(this);
+        };
+        Carte.prototype = 
+        Object.create(Phaser.Physics.Arcade.Sprite.prototype);
+            Carte.prototype.constructor =
+            Carte;
+            this.carte1 = new Carte(this, 100, 100, "carte");
 
  //       var carte2 = new Carte(1, '2');
 
