@@ -3,10 +3,12 @@
 constructor(){
     super("jeu")
 
-    function Carte(id, image){
-        this. id = 0;
-        this. image = this.load.image('carte', 'assets/carteDos.png');
-    }
+class Carte extends Phaser.GameObjects.Sprite {
+  constructor(config) {
+    super(config.scene, config.x, config.y, config.texture);
+    config.scene.add.existing(this);
+  }
+}
 
         function CarteImp1(id, image){
         this. id = 1;
@@ -44,7 +46,6 @@ constructor(){
     var cursors;
     var id;
     var image;
-    var Carte;
     var carte1;
     var cartesHidd;
     var cartesRetourn;
@@ -60,19 +61,19 @@ constructor(){
 
     create(){
 
-        carte1.prototype = object.create(Carte.prototype);
-        carte1.prototype.constructor = carte1;
+        var carte1 = new Carte({Scene: this, x:100, y:100, texture: "carte"});
 
-        var carte2 = new Carte(1, '2');
+ //       var carte2 = new Carte(1, '2');
 
-        var carte3 = new Carte(1, '3');
+   //     var carte3 = new Carte(1, '3');
 
-        var carte4 = new Carte(1, '4');
+    //    var carte4 = new Carte(1, '4');
 
-        var carte5 = new Carte(1, '5');
+    //    var carte5 = new Carte(1, '5');
 
-        var carte6 = new Carte(1, '6');
-        }
+    //    var carte6 = new Carte(1, '6');
+        
+        } 
 
     update(){
 
