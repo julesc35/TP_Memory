@@ -37,11 +37,15 @@ constructor(){
         this. id = 6;
         this. image = this.load.image('6', 'assets/6.png');
     }
+
 }
 
     preload(){
+    var cursors;
     var id;
     var image;
+    var Carte;
+    var carte1;
     var cartesHidd;
     var cartesRetourn;
 
@@ -53,8 +57,21 @@ constructor(){
     this.load.image('5', 'assets/5.png');
     this.load.image('6', 'assets/6.png');
 }
+
     create(){
-        var cart1 = new Carte(1, '1');
+
+        carte1.prototype = object.create(Carte.prototype);
+        carte1.prototype.constructor = carte1;
+
+        var carte2 = new Carte(1, '2');
+
+        var carte3 = new Carte(1, '3');
+
+        var carte4 = new Carte(1, '4');
+
+        var carte5 = new Carte(1, '5');
+
+        var carte6 = new Carte(1, '6');
         }
 
     update(){
